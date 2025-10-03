@@ -714,3 +714,28 @@ img, svg, video {
   .hero-section-container2, .frame559-container2 { right: 16px; bottom: 16px; }
   .frame559-text20, .hero-section-text27 { font-size: 12px; line-height: 20px; }
 }
+
+/* ====== Global type and overflow safety ====== */
+html { font-size: clamp(14px, 1.1vw + 10px, 16px); }
+body { overflow-x: hidden; }
+
+/* Scale key hero texts and buttons responsively without changing design intent */
+.hero-section-text12 { font-size: clamp(32px, 6vw, 64px); line-height: 1.15; }
+.hero-section-text16 { font-size: clamp(14px, 2.2vw, 16px); line-height: 1.9; }
+.hero-section-buttons1, .hero-section-buttons2, .hero-section-buttons3 { font-size: clamp(14px, 1.6vw, 18px); padding: 1em 1.75em; }
+
+/* Ensure core sections have side padding on small screens for readability */
+@media(max-width: 991px){
+  .thq-section-max-width { padding-left: 20px; padding-right: 20px; }
+  .frame559-frame567 { padding-left: 20px; padding-right: 20px; }
+}
+@media(max-width: 600px){
+  .thq-section-max-width { padding-left: 16px; padding-right: 16px; }
+  .frame559-frame567 { padding-left: 16px; padding-right: 16px; }
+}
+
+/* Large screens: expand max width slightly and upscale hero heading a bit */
+@media(min-width: 1600px){
+  :root { --dl-layout-size-maxwidth: 1600px; }
+  .hero-section-text12 { font-size: 72px; }
+}
