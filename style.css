@@ -647,3 +647,70 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ====== Global fluid media ====== */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== Responsive overrides for hero and cards ====== */
+.hero-section-hero-section2 {
+  height: auto;
+  min-height: calc(100vh - 72px);
+}
+
+@media(max-width: 1200px){
+  .hero-section-frame249 { left: 60px; }
+}
+
+@media(max-width: 991px){
+  .hero-section-hero-section2 { padding-top: 96px; }
+  .hero-section-frame249 {
+    left: 40px;
+    width: calc(100% - 80px);
+  }
+  .hero-section-text12 { font-size: 48px; line-height: 1.2; }
+  .hero-section-text16 { width: 100%; max-width: 640px; }
+  .hero-section-frame2392 { left: 40px; right: 40px; width: auto; }
+}
+
+@media(max-width: 767px){
+  .hero-section-group12 { position: relative; height: auto; }
+  .hero-section-ellipse6, .hero-section-ellipse5, .hero-section-portraithappyyoungwomanstandingwithbackpackholding {
+    position: relative; left: auto; top: auto; width: 100%; height: auto;
+  }
+  .hero-section-frame249 {
+    position: relative; left: auto; top: auto;
+    width: 100%; padding: 0 16px; gap: 16px;
+  }
+  .hero-section-text12 { font-size: 40px; }
+  .hero-section-frame321 { flex-wrap: wrap; }
+  .hero-section-frame2391 { left: auto; top: auto; position: relative; margin: 20px 16px 0; width: auto; }
+  .hero-section-frame2392 { position: relative; top: auto; left: auto; margin: 16px; }
+}
+
+@media(max-width: 640px){
+  .hero-section-text12 { font-size: 34px; }
+  .hero-section-buttons1, .hero-section-buttons2 { width: 100%; justify-content: center; }
+}
+
+/* ====== Features grid responsiveness ====== */
+.frame559-frame567 { width: 100%; max-width: var(--dl-layout-size-maxwidth); left: 50%; transform: translateX(-50%); }
+.frame559-frame551 { flex-wrap: wrap; gap: var(--dl-layout-space-oneandhalfunits); }
+.frame559-frame2971, .frame559-frame5542, .frame559-frame555, .frame559-frame553 {
+  width: calc(25% - 15px);
+  min-width: 260px;
+}
+@media(max-width: 991px){
+  .frame559-frame2971, .frame559-frame5542, .frame559-frame555, .frame559-frame553 { width: calc(50% - 12px); }
+}
+@media(max-width: 600px){
+  .frame559-frame2971, .frame559-frame5542, .frame559-frame555, .frame559-frame553 { width: 100%; }
+}
+
+/* ====== Floating helper bubble spacing on small screens ====== */
+@media(max-width: 480px){
+  .hero-section-container2, .frame559-container2 { right: 16px; bottom: 16px; }
+  .frame559-text20, .hero-section-text27 { font-size: 12px; line-height: 20px; }
+}
